@@ -8,5 +8,5 @@
 
 |包名|介绍|具体地址|
 |---|---|---|
-|@pd/webpack-js-config|js打包预设||
-|@pd/webpacl-css-config|css打包预设||
+|@pd/webpack-js-config|js打包预设|[仓库地址](https://github.com/LaoChen1994/pd-webpack-preset/tree/master/packages/webpack-pd-js)|
+|@pd/webpacl-css-config|css打包预设|[仓库地址](https://github.com/LaoChen1994/pd-webpack-preset/tree/master/packages/webpack-pd-css)|
