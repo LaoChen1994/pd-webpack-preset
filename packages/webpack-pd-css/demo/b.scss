@@ -1,0 +1,21 @@
+$box-max: 20;
+$box-step: 2;
+
+$box-prop: ('padding' , 'margin', 'border');
+$box-direaction: ('top', 'right', 'bottom', 'left');
+
+$i: $box-step;
+@while $i <= $box-max {
+  @each $way in $box-direaction {
+    @each $prop in $box-prop {
+      .#{$prop}-#{$way}-#{$i} {
+        #{$prop}-#{$way}: #{$i}px;
+      }
+      // padding-2: 2px;
+      .#{$prop}-#{$i} {
+        #{$prop}: #{$i}px;
+      }
+    }
+  }
+  $i: $i + $box-step;
+}
