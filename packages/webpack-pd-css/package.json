@@ -1,5 +1,5 @@
 {
-  "name": "@pd/webpack-css-config",
+  "name": "pd-css-config",
   "version": "0.2.2-alpha.0",
   "description": "webpack css通用配置",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
@@ -28,5 +28,5 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
   },
-  "gitHead": "19c6e52ead7d296205e614f977596e632d96a84d"
+  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c"
 }

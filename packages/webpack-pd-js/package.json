@@ -1,5 +1,5 @@
 {
-  "name": "@pd/webpack-js-config",
+  "name": "pd-js-config",
   "version": "0.2.2-alpha.0",
   "description": "简单易用的js webpack预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
@@ -32,5 +32,5 @@
     "babel-loader": "^8.2.3",
     "core-js": "3"
   },
-  "gitHead": "19c6e52ead7d296205e614f977596e632d96a84d"
+  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c"
 }
