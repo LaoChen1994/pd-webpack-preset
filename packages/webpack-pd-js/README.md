@@ -1,4 +1,4 @@
-# `@pd/webpack-js-config`
+# `pd-js-config`
 
 > 简单易用的webpack js preset
 
@@ -6,13 +6,15 @@
 
 ```bash
 
-npm install -D @pd/webpack-js-config
+npm install -D pd-js-config
 
 ```
 
+## 用法
+
 ```javascript
 // webpack.config.js
-const { default: getJsConfig } = require("./dist/index.js");
+const { default: getJsConfig } = require("pd-js-config");
 const { merge } = require("webpack-merge");
 const path = require('path')
 
