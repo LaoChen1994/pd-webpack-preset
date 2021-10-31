@@ -1,6 +1,6 @@
 {
   "name": "@pd/webpack-css-config",
-  "version": "0.2.0",
+  "version": "0.2.1-alpha.0",
   "description": "webpack css通用配置",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
