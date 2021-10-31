@@ -24,5 +24,6 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "ts-loader": "^9.2.6"
-  }
+  },
+  "gitHead": "e2696952027b3462048fb3a66a20d231d3e007f2"
 }

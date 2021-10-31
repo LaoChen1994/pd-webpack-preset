@@ -31,5 +31,6 @@
     "@babel/preset-env": "^7.16.0",
     "babel-loader": "^8.2.3",
     "core-js": "3"
-  }
+  },
+  "gitHead": "e2696952027b3462048fb3a66a20d231d3e007f2"
 }
