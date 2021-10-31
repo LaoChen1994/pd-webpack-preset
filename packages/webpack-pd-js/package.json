@@ -1,6 +1,6 @@
 {
   "name": "@pd/webpack-js-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "简单易用的js webpack预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
