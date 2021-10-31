@@ -4,7 +4,7 @@
   "description": "简单易用的js webpack预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/index.js",
   "directories": {
     "dist": "dist"
@@ -32,5 +32,5 @@
     "babel-loader": "^8.2.3",
     "core-js": "3"
   },
-  "gitHead": "eb7df62684cec05eba2a4516906ae7790ca807fb"
+  "gitHead": "15b100dccdc2d26353a000f49430d80d48edea68"
 }
