@@ -3,6 +3,8 @@ import { Configuration } from "webpack";
 import { IWebpackExtraConfig } from "./interface";
 import MiniCssExtract from "mini-css-extract-plugin";
 
+import { rideOfEmpty } from "./utils";
+
 export default (
   opt: IWebpackExtraConfig,
   config: Partial<Configuration> = {}
@@ -14,30 +16,36 @@ export default (
     cssSplit = {},
   } = opt;
   const isProduction = env === "production"; // 默认development
+  const hasDeclaration = opt.declaration;
 
   const cssRegx = /\.css/i;
   const scssRegx = /\.s(a|c)ss/i;
 
-  const { enable, devCssSplitName = '[name].css', prodCssSplitName = '[name]_[hash].css' } = cssSplit;
+  const {
+    enable,
+    devCssSplitName = "[name].css",
+    prodCssSplitName = "[name]_[hash].css",
+  } = cssSplit;
 
-  const rules = [
+  const cssModuleOpt = {
+    modules: useCssModule
+      ? {
+          localIdentName: "[name]_[hash:base64:5]",
+        }
+      : false,
+  };
+
+  const rules: any[] = [
     {
       test: cssRegx,
-      use: [
-        {
-          loader: "style-loader",
-        },
+      use: rideOfEmpty([
+        "style-loader",
+        hasDeclaration ? "css-modules-typescript-loader" : "",
         {
           loader: "css-loader",
-          options: {
-            modules: useCssModule
-              ? {
-                  localIdentName: "[name]_[hash:base64:5]",
-                }
-              : false,
-          },
+          options: cssModuleOpt,
         },
-      ],
+      ]),
     },
   ];
   const extensions = [".css"];
@@ -46,32 +54,27 @@ export default (
   if (preCompile === "scss") {
     rules.push({
       test: scssRegx,
-      use: [
-        {
-          loader: "style-loader",
-        },
+      use: rideOfEmpty([
+        isProduction && enable ? MiniCssExtract.loader : "style-loader",
+        hasDeclaration ? "css-modules-typescript-loader" : "",
         {
           loader: "css-loader",
-          options: {
-            modules: {
-              localIdentName: "[name]__[local]--[hash:base64:5]",
-            },
-          },
+          options: cssModuleOpt,
         },
-        {
-          loader: "sass-loader",
-        },
-      ],
+        "sass-loader",
+      ]),
     });
 
     extensions.push(".scss");
   }
 
   if (enable) {
-    plugins.push(new MiniCssExtract({
+    plugins.push(
+      new MiniCssExtract({
         filename: isProduction ? prodCssSplitName : devCssSplitName,
-        linkType: 'text/css'
-      }))
+        linkType: "text/css",
+      })
+    );
   }
 
   return merge(
@@ -83,7 +86,7 @@ export default (
       resolve: {
         extensions,
       },
-      plugins
+      plugins,
     },
     config
   );

@@ -1,0 +1,1 @@
+export const rideOfEmpty = (list: any[]) => list.filter(item => item)

@@ -1,4 +1,4 @@
-const a = require('./a.css')
-const b = require('./b.scss')
+require('./a.css')
+require('./b.scss')
 
-console.log(b)
+const add = (a, b) => a + b

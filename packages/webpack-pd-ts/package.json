@@ -17,6 +17,12 @@
     "registry": "https://registry.npm.taobao.org/"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsc",
+    "test": "webpack --config ./demo/webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "ts-loader": "^9.2.6"
   }
 }

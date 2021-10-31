@@ -16,12 +16,13 @@
     "registry": "https://registry.npm.taobao.org/"
   },
   "scripts": {
-    "test": "webpack --config ./webpack.config.js",
+    "test": "webpack --config ./demo/webpack.config.js",
     "build": "tsc"
   },
   "devDependencies": {
     "@types/mini-css-extract-plugin": "^2.4.0",
     "css-loader": "^6.5.0",
+    "css-modules-typescript-loader": "^4.0.1",
     "mini-css-extract-plugin": "^2.4.3",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",

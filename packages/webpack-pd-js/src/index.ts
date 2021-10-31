@@ -10,8 +10,8 @@ export default (
   const isNodeEnv = config.target === "node"; // 默认浏览器环境
   const useJSX = !!opt.jsx; // 默认false
 
-  const jsRegx = /\.js/;
-  const jsxRegx = /\.jsx/;
+  const jsRegx = /\.js/i;
+  const jsxRegx = /\.jsx?/i;
 
   return merge(
     {
