@@ -13,7 +13,7 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "scripts": {
     "test": "webpack --config ./demo/webpack.config.js",
@@ -28,5 +28,5 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
   },
-  "gitHead": "d06641a1399295b804b76a9377df987f3e0c4732"
+  "gitHead": "ff1f0935e6dd80ca339d9b3eb0d9de49ab40804d"
 }
