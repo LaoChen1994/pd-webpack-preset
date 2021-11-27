@@ -30,5 +30,10 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
   },
-  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c"
+  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
+  "dependencies": {
+    "postcss": "^8.4.3",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.0.1"
+  }
 }

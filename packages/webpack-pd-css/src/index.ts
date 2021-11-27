@@ -1,12 +1,10 @@
-import { Configuration } from "webpack";
+import { Configuration, RuleSetRule } from "webpack";
 import { IWebpackExtraConfig } from "./interface";
 import MiniCssExtract from "mini-css-extract-plugin";
 
 import { rideOfEmpty } from "./utils";
 
-export default (
-  opt: IWebpackExtraConfig,
-): Configuration => {
+export default (opt: IWebpackExtraConfig): Configuration => {
   const {
     env = "development",
     preCompile = "none",
@@ -59,6 +57,18 @@ export default (
           loader: "css-loader",
           options: cssModuleOpt,
         },
+        {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: [
+                [
+                  "postcss-preset-env",
+                ],
+              ],
+            },
+          },
+        },
         "sass-loader",
       ]),
     });
@@ -76,13 +86,13 @@ export default (
   }
 
   return {
-      mode: isProduction ? "production" : "development",
-      module: {
-        rules,
-      },
-      resolve: {
-        extensions,
-      },
-      plugins,
-    }
+    mode: isProduction ? "production" : "development",
+    module: {
+      rules,
+    },
+    resolve: {
+      extensions,
+    },
+    plugins,
+  };
 };
