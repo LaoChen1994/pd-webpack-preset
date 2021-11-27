@@ -24,6 +24,7 @@ export default (
                 presets: [
                   [
                     "@babel/preset-env",
+                    useJSX ? "@babel/preset-react" : '',
                     {
                       useBuiltIns: "usage",
                       targets: isNodeEnv
@@ -32,7 +33,7 @@ export default (
                       corejs: 3,
                     },
                   ],
-                ],
+                ].filter(item => item),
                 plugins: ["@babel/plugin-transform-runtime"],
                 cacheDirectory: true,
               },

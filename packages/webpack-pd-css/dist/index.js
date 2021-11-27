@@ -44,6 +44,18 @@ exports.default = (function (opt) {
                     loader: "css-loader",
                     options: cssModuleOpt,
                 },
+                {
+                    loader: "postcss-loader",
+                    options: {
+                        postcssOptions: {
+                            plugins: [
+                                [
+                                    "postcss-preset-env",
+                                ],
+                            ],
+                        },
+                    },
+                },
                 "sass-loader",
             ]),
         });
