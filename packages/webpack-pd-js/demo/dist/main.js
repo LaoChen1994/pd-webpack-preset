@@ -15,7 +15,7 @@
   \***********************/
 /***/ (() => {
 
-eval("var a = {\n  a: 1,\n  b: 2\n};\n\nvar getA = function getA() {\n  return a === null || a === void 0 ? void 0 : a.a;\n};\n\nconsole.log(getA());\n\n//# sourceURL=webpack://pd-js-config/./demo/index.js?");
+eval("var a = {\n  a: 1,\n  b: 2\n};\n\nvar getA = function getA() {\n  return a === null || a === void 0 ? void 0 : a.a;\n};\n\nvar AComponent = function AComponent() {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"123\");\n};\n\nconsole.log(getA());\n\n//# sourceURL=webpack://pd-js-config/./demo/index.js?");
 
 /***/ })
 

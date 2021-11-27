@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = merge(
   getJsConfig({
     env: "production",
-    jsx: false,
+    jsx: true,
     isNodeEnv: false
   }),
   {
