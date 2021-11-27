@@ -1,6 +1,6 @@
 {
   "name": "pd-ts-config",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "通用ts预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
@@ -28,6 +28,6 @@
   },
   "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
   "dependencies": {
-    "pd-css-config": "^0.3.1"
+    "pd-css-config": "^0.3.2"
   }
 }
