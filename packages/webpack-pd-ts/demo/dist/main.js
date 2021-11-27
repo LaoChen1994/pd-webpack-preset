@@ -16,7 +16,7 @@
   \************************/
 /***/ (() => {
 
-eval("\n\nvar b = {\n  a: 1,\n  b: 2\n};\n\nvar getB = function () {\n  return b === null || b === void 0 ? void 0 : b.b;\n};\n\nconsole.log(getB());\n\nvar Component = function () {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"123\");\n};\n\n//# sourceURL=webpack://@pd/webpack-ts-config/./demo/index.tsx?");
+eval("\n\nvar b = {\n  a: 1,\n  b: 2\n};\n\nvar getB = function getB() {\n  return b === null || b === void 0 ? void 0 : b.b;\n};\n\nconsole.log(getB());\n\nvar Component = function Component() {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"123\");\n};\n\n//# sourceURL=webpack://pd-ts-config/./demo/index.tsx?");
 
 /***/ })
 

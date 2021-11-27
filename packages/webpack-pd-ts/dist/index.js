@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var webpack_merge_1 = require("webpack-merge");
 var utils_1 = require("./utils");
 exports.default = (function (opt, config) {
     if (config === void 0) { config = {}; }
@@ -38,7 +37,7 @@ exports.default = (function (opt, config) {
             ],
         }
     ];
-    return (0, webpack_merge_1.merge)({
+    return {
         mode: isProduction ? "production" : "development",
         module: {
             rules: rules,
@@ -46,5 +45,5 @@ exports.default = (function (opt, config) {
         resolve: {
             extensions: (0, utils_1.rideOfEmpty)([".ts", useJSX ? '.tsx' : '']),
         },
-    }, config);
+    };
 });

@@ -12,12 +12,14 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "test": "webpack --config ./demo/webpack.config.js",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/mini-css-extract-plugin": "^2.4.0",

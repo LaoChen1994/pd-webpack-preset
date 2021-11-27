@@ -1,14 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var webpack_merge_1 = require("webpack-merge");
-exports.default = (function (opt, config) {
-    if (config === void 0) { config = {}; }
+exports.default = (function (opt) {
     var isProduction = opt.env === "production"; // 默认development
-    var isNodeEnv = config.target === "node"; // 默认浏览器环境
+    var isNodeEnv = opt.isNodeEnv; // 默认浏览器环境
     var useJSX = !!opt.jsx; // 默认false
-    var jsRegx = /\.js/;
-    var jsxRegx = /\.jsx/;
-    return (0, webpack_merge_1.merge)({
+    var jsRegx = /\.js/i;
+    var jsxRegx = /\.jsx?/i;
+    return {
         mode: isProduction ? "production" : "development",
         module: {
             rules: [
@@ -26,7 +24,7 @@ exports.default = (function (opt, config) {
                                             targets: isNodeEnv
                                                 ? { node: "current" }
                                                 : { chrome: "58", ie: "11" },
-                                            corejs: 3
+                                            corejs: 3,
                                         },
                                     ],
                                 ],
@@ -38,5 +36,8 @@ exports.default = (function (opt, config) {
                 },
             ],
         },
-    }, config);
+        resolve: {
+            extensions: [".js"],
+        },
+    };
 });

@@ -1,4 +1,3 @@
-import { merge } from "webpack-merge";
 import { Configuration } from "webpack";
 import { IWebpackExtraConfig } from "./interface";
 import MiniCssExtract from "mini-css-extract-plugin";
@@ -7,7 +6,6 @@ import { rideOfEmpty } from "./utils";
 
 export default (
   opt: IWebpackExtraConfig,
-  config: Partial<Configuration> = {}
 ): Configuration => {
   const {
     env = "development",
@@ -77,8 +75,7 @@ export default (
     );
   }
 
-  return merge(
-    {
+  return {
       mode: isProduction ? "production" : "development",
       module: {
         rules,
@@ -87,7 +84,5 @@ export default (
         extensions,
       },
       plugins,
-    },
-    config
-  );
+    }
 };

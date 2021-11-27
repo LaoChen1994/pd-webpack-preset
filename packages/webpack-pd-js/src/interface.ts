@@ -1,4 +1,5 @@
 export interface IWebpackExtraConfig {
   env: 'production' | 'development'
-  jsx: boolean
+  jsx: boolean,
+  isNodeEnv: boolean
 }

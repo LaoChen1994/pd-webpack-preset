@@ -1,7 +1,5 @@
-import { merge } from "webpack-merge";
 import { Configuration } from "webpack";
 import { IWebpackExtraConfig } from "./interface";
-
 import { rideOfEmpty } from './utils'
 
 export default (
@@ -45,8 +43,7 @@ export default (
     }
   ];
 
-  return merge(
-    {
+  return {
       mode: isProduction ? "production" : "development",
       module: {
         rules,
@@ -54,7 +51,5 @@ export default (
       resolve: {
         extensions: rideOfEmpty([".ts", useJSX ? '.tsx' : '']),
       },
-    },
-    config
-  );
+    }
 };

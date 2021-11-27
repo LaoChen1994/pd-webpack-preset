@@ -12,17 +12,22 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsc",
-    "test": "webpack --config ./demo/webpack.config.js"
+    "test": "webpack --config ./demo/webpack.config.js",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "ts-loader": "^9.2.6"
   },
-  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c"
+  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
+  "dependencies": {
+    "pd-css-config": "^0.2.3"
+  }
 }

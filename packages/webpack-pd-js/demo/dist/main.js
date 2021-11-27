@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./__tests__/index.js":
-/*!****************************!*\
-  !*** ./__tests__/index.js ***!
-  \****************************/
+/***/ "./demo/index.js":
+/*!***********************!*\
+  !*** ./demo/index.js ***!
+  \***********************/
 /***/ (() => {
 
-eval("const a = {\n  a: 1,\n  b: 2\n};\n\nconst getA = () => a === null || a === void 0 ? void 0 : a.a;\n\nconsole.log(getA());\n\n//# sourceURL=webpack://webpack-pd-js/./__tests__/index.js?");
+eval("var a = {\n  a: 1,\n  b: 2\n};\n\nvar getA = function getA() {\n  return a === null || a === void 0 ? void 0 : a.a;\n};\n\nconsole.log(getA());\n\n//# sourceURL=webpack://pd-js-config/./demo/index.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("const a = {\n  a: 1,\n  b: 2\n};\n\nconst getA = () => a === null || a ===
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./__tests__/index.js"]();
+/******/ 	__webpack_modules__["./demo/index.js"]();
 /******/ 	
 /******/ })()
 ;

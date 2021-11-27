@@ -12,12 +12,14 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsc",
-    "test": "webpack --config ./demo/webpack.config.js"
+    "test": "webpack --config ./demo/webpack.config.js",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",

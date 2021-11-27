@@ -22,16 +22,17 @@ module.exports = merge(
   getJsConfig(
     {
       env: "production",
-      jsx: false
-    },
-    {
-      entry: path.resolve(__dirname, './index.js'),
-      output: {
-        path: path.resolve(__dirname, './dist'),
-      },
-      mode: 'development',
-      target: 'node'
+      jsx: false,
+      isNodeEnv: false
     }
-  )
+  ),
+  {
+    entry: path.resolve(__dirname, './index.js'),
+    output: {
+      path: path.resolve(__dirname, './dist'),
+    },
+    mode: 'development',
+    target: 'node'
+  }
 );
 ```

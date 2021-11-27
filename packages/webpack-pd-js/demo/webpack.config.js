@@ -1,20 +1,19 @@
 const { default: getJsConfig } = require("../dist/index.js");
 const { merge } = require("webpack-merge");
-const path = require('path')
+const path = require("path");
 
 module.exports = merge(
-  getJsConfig(
-    {
-      env: "production",
-      jsx: false
+  getJsConfig({
+    env: "production",
+    jsx: false,
+    isNodeEnv: false
+  }),
+  {
+    entry: path.resolve(__dirname, "./index.js"),
+    output: {
+      path: path.resolve(__dirname, "./dist/"),
     },
-    {
-      entry: path.resolve(__dirname, './index.js'),
-      output: {
-        path: path.resolve(__dirname, './dist/'),
-      },
-      mode: 'development',
-      target: 'node'
-    }
-  )
+    mode: "development",
+    target: "node",
+  }
 );
