@@ -27,7 +27,5 @@
     "ts-loader": "^9.2.6"
   },
   "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
-  "dependencies": {
-    "pd-css-config": "^0.3.6"
-  }
+  "dependencies": {}
 }

@@ -41,6 +41,7 @@ export default (opt: IWebpackExtraConfig): Configuration => {
           loader: "css-loader",
           options: cssModuleOpt,
         },
+        "postcss-loader"
       ]),
     },
   ];
