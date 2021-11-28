@@ -1,6 +1,6 @@
 {
   "name": "pd-css-config",
-  "version": "0.3.2",
+  "version": "0.3.6",
   "description": "webpack css通用配置",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
@@ -26,23 +26,23 @@
   },
   "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
   "dependencies": {
-    "postcss": "^8.4.3",
-    "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.0.1",
     "css-loader": "^6.5.0",
     "css-modules-typescript-loader": "^4.0.1",
     "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.4.3",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.0.1",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
   },
   "peerDependencies": {
-    "postcss": "^8.4.3",
-    "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.0.1",
     "css-loader": "^6.5.0",
     "css-modules-typescript-loader": "^4.0.1",
     "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.4.3",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.0.1",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1"
