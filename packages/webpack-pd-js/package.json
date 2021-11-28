@@ -21,19 +21,21 @@
     "test": "webpack --config ./demo/webpack.config.js",
     "prepublishOnly": "yarn build"
   },
+  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c",
+  "peerDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.19.1"
+  },
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
-    "babel-loader": "^8.2.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.16.0",
     "babel-loader": "^8.2.3",
-    "core-js": "3"
-  },
-  "gitHead": "9fc589d450a6f184d54d2eea00dbcbdeab50641c"
+    "core-js": "^3.19.1"
+  }
 }
