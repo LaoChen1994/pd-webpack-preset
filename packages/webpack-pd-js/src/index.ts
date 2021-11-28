@@ -1,11 +1,8 @@
 import { Configuration } from "webpack";
 import { IWebpackExtraConfig } from "./interface";
 
-export default (
-  opt: IWebpackExtraConfig,
-): Configuration => {
+export default (opt: IWebpackExtraConfig): Configuration => {
   const isProduction = opt.env === "production"; // 默认development
-  const isNodeEnv = opt.isNodeEnv; // 默认浏览器环境
   const useJSX = !!opt.jsx; // 默认false
 
   const jsRegx = /\.js/i;
@@ -22,19 +19,9 @@ export default (
               loader: "babel-loader",
               options: {
                 presets: [
-                  [
-                    "@babel/preset-env",
-                    {
-                      useBuiltIns: "usage",
-                      targets: isNodeEnv
-                        ? { node: "current" }
-                        : { chrome: "58", ie: "11" },
-                      corejs: 3,
-                    },
-                  ],
-                  useJSX ? "@babel/preset-react" : '',
-                ].filter(item => item),
-                plugins: ["@babel/plugin-transform-runtime"],
+                  "@babel/preset-env",
+                  useJSX ? "@babel/preset-react" : "",
+                ].filter((item) => item),
                 cacheDirectory: true,
               },
             },
@@ -43,7 +30,7 @@ export default (
       ],
     },
     resolve: {
-      extensions: [".js"],
+      extensions: [".js", ".jsx"],
     },
   };
 };
