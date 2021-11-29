@@ -29,6 +29,7 @@ exports.default = (function (opt) {
                     loader: "css-loader",
                     options: cssModuleOpt,
                 },
+                "postcss-loader"
             ]),
         },
     ];
