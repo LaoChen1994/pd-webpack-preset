@@ -1,6 +1,6 @@
 {
-  "name": "pd-ts-config",
-  "version": "0.3.7",
+  "name": "@youzan/ts-config",
+  "version": "0.1.0",
   "description": "通用ts预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",

@@ -1,6 +1,6 @@
 {
-  "name": "pd-js-config",
-  "version": "0.3.5",
+  "name": "@youzan/js-config",
+  "version": "0.1.0",
   "description": "简单易用的js webpack预设",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",

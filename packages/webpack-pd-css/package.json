@@ -1,6 +1,6 @@
 {
-  "name": "pd-css-config",
-  "version": "0.3.7",
+  "name": "@youzan/css-config",
+  "version": "0.1.0",
   "description": "webpack css通用配置",
   "author": "chenyixiang <chenyixiang_cyx@youzan.com>",
   "homepage": "",
